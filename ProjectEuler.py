@@ -54,6 +54,7 @@ def pe6(n=100):
 
 
 def pe7(n=10001):
+	'''What is the 10001st prime number?'''
 	primes = [2]
 	p = 3
 	while len(primes) < n:

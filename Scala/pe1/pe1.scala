@@ -11,6 +11,6 @@ object ProjectEulerOne {
 	  xs.filter(f(_)).sum
 
 	def main(args: Array[String]): Unit = {
-		println(filterSum((1 until 1000).toArray, x => x%3 == 0 || x%5 == 0))
+		println(filterSum((1 until 1000).toArray, x => x % 3 == 0 || x % 5 == 0))
 	}
 }

@@ -192,7 +192,7 @@ def pe21():
 def pe22():
 	'''What is the total of all the name scores in the file?'''
 	letter_score = {letter:i for i, letter in enumerate('\"ABCDEFGHIJKLMNOPQRSTUVWXYZ')}
-	names = sorted([name for name in open('files/p022_names.txt').read().split(',')])
+	names = sorted([name for name in open('../files/p022_names.txt').read().split(',')])
 
 	tot = 0
 	for i, name in enumerate(names):

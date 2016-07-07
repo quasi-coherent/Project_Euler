@@ -7,5 +7,15 @@
 // do not exceed four million, find the sum of the even-valued terms.
 
 object ProjectEulerTwo {
-	
+	def sumEvenFib(lim: Int): Int = {
+		def loop(lim: Int, prev: Int, curr: Int, acc: Int): Int = 
+			if (curr > lim) acc
+			else if (curr % 2 == 0) loop(lim + 1, curr, prev + curr, acc + curr)
+			else loop(lim + 1, curr, prev + curr, acc)
+		loop(lim, 0, 1, 0)
+	}
+
+	def main(args: Array[String]): Unit = {
+		println(sumEvenFib(4000000))
+	}
 }

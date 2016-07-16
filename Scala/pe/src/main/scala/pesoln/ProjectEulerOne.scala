@@ -20,4 +20,3 @@ object ProjectEulerOne {
     println(filterSum(List.range(1, 1000), 0)(x => x % 3 == 0 || x % 5 == 0))
   }
 }
-

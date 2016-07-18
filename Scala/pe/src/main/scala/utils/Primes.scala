@@ -15,9 +15,11 @@ object Primes {
     }
   }
 
-  def sieveOfEratosthenes(lim: Int): List[Int] ={
+  def sieveOfEratosthenes(lim: Int): List[Int] = {
     val odds = Stream.from(3, 2).takeWhile(_ <= Math.sqrt(lim).toInt)
     val composites = odds.flatMap(n => Stream.from(n * n, 2 * n).takeWhile(_ <= lim))
     Stream.from(3, 2).takeWhile(_ <= lim).diff(composites).toList
   }
+
+  def primeFactors(num: Int): List[Int] = sieveOfEratosthenes(num).filter(num % _ == 0)
 }

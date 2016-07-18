@@ -20,5 +20,4 @@ object ProjectEulerTwo {
 
   def main(args: Array[String]): Unit = {
     println(sumEvenFib(4000000))
-  }
 }

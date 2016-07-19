@@ -18,6 +18,6 @@ object ProjectEulerTwo {
     loop(lim, 0, 1, 0)
   }
 
-  def main(args: Array[String]): Unit = {
+  def main(args: Array[String]): Unit =
     println(sumEvenFib(4000000))
 }

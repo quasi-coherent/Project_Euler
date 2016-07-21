@@ -3,9 +3,10 @@ package pesoln
 import utils.Primes.primeFactors
 
 /**
-The prime factors of 13195 are 5, 7, 13 and 29.
-
-What is the largest prime factor of the number 600851475143? */
+  * The prime factors of 13195 are 5, 7, 13 and 29.
+  *
+  * What is the largest prime factor of the number 600851475143?
+  */
 
 object ProjectEulerThree {
   def largestPrimeFactor(n: Long): Int = primeFactors(Math.sqrt(n).toInt + 1).max

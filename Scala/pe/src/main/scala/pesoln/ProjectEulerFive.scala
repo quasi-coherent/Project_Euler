@@ -11,5 +11,7 @@ import utils.NumberTheory.leastCommonMultiple
   */
 
 object ProjectEulerFive {
-  def main = (1 until 20).toList.reduce(leastCommonMultiple)
+  def main(args: Array[String]): Unit = {
+    println((1 until 20).toList.reduce(leastCommonMultiple))
+  }
 }

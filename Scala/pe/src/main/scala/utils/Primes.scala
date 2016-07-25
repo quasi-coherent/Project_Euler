@@ -25,6 +25,4 @@ object Primes {
 
   def nthPrime(n: Int): Int =
     Stream.from(1).filter(n => isPrime(n.toLong)).zipWithIndex.takeWhile(_._2 <= n).last._1
-
-
 }

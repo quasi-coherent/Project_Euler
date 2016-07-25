@@ -9,7 +9,7 @@ import utils.Primes.primeFactors
   */
 
 object ProjectEulerThree {
-  def largestPrimeFactor(n: Long): Int = primeFactors(Math.sqrt(n).toInt + 1).max
+  def largestPrimeFactor(n: Long): Int = primeFactors(Math.sqrt(n).toInt).max
 
   def main(args: Array[String]): Unit = {
     println(largestPrimeFactor(600851475143L))

@@ -12,8 +12,10 @@ object ProjectEulerFour {
   def isPalindrome(n: Int): Boolean = n.toString.reverse == n.toString
 
   def palindromeProd(n: Int) =
-    for (i <- Math.pow(10, n - 1).toInt until Math.pow(10, n).toInt;
-         j <- Math.pow(10, n - 1).toInt until i if isPalindrome(i * j)) yield i * j
+    for {
+      i <- Math.pow(10, n - 1).toInt until Math.pow(10, n).toInt
+      j <- Math.pow(10, n - 1).toInt until i if isPalindrome(i * j)
+    } yield i * j
 
   def maxPalindromeProd(n: Int): Int = palindromeProd(n).max
 

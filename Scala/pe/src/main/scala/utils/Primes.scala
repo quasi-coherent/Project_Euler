@@ -5,7 +5,7 @@ object Primes {
     def loop(n: Long, lim: Long): Boolean =
       if (lim > Math.sqrt(n)) true
       else if (n % lim == 0) false
-      else loop(n, lim + 1)
+      else loop(n, lim + 2)
 
     n match {
       case 1 => false

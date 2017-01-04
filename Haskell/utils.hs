@@ -8,3 +8,9 @@ primeFactors n =
     [] -> [n]
     _  -> factors ++ primeFactors (n `div` (head factors))
   where factors = take 1 $ filter (\x -> (n `mod` x) == 0) [2 .. n-1]
+
+isPalindrome :: String -> Bool
+isPalindrome s = s == reverse s
+
+leastCommonMultiple :: [Integer] -> Integer
+leastCommonMultiple ns = foldl lcm 1 ns

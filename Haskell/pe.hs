@@ -13,3 +13,11 @@ pe2 n =
 pe3 :: Integer -> Integer
 pe3 n = maximum (primeFactors n)
 -- pe3 600851475143 = 6857
+
+pe4 :: Integer -> Integer
+pe4 n = maximum [x*y | x <- [10^(n-1)..10^n-1], y <- [10^(n-1)..10^n-1], isPalindrome(show (x*y))]
+-- pe4 3 = 906609
+
+pe5 :: [Integer] -> Integer
+pe5 ns = leastCommonMultiple ns
+-- pe5 [1..20] = 232792560

@@ -20,4 +20,9 @@ pe4 n = maximum [x*y | x <- [10^(n-1)..10^n-1], y <- [10^(n-1)..10^n-1], isPalin
 
 pe5 :: [Integer] -> Integer
 pe5 ns = leastCommonMultiple ns
+  where leastCommonMultiple ns = foldl lcm 1 ns
 -- pe5 [1..20] = 232792560
+
+pe6 :: Integer -> Integer
+pe6 n = (sum [1..n])^2 - sum [m^2 | m <- [1..n]]
+-- pe6 100 = 25164150
